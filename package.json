@@ -1,0 +1,32 @@
+{
+  "name": "library-management",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "pnpm biome check src",
+    "format": "pnpm biome format --write src",
+    "lint:fix": "pnpm biome check  --fix src",
+    "typecheck": "tsc --noEmit --pretty",
+    "prepare": "lefthook install",
+    "commit": "cz",
+    "clean": "rimraf .next node_modules"
+  },
+  "dependencies": {
+    "@radix-ui/themes": "^3.1.6",
+    "next": "15.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
