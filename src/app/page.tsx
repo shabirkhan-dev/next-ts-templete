@@ -43,7 +43,7 @@ export default function Page() {
 						<div className="w-2 h-2 bg-blue-500 rounded-full" />
 					</div>
 					<span className="font-semibold text-xl text-gray-900 dark:text-white">
-						LiteraryLogic
+						Prolib
 					</span>
 				</div>
 
@@ -51,7 +51,6 @@ export default function Page() {
 
 				<div className="flex items-center gap-4">
 					<Button type="button">Sign in</Button>
-					<Button variant={"default"}>Request demo</Button>
 					<Button variant="ghost" onClick={toggleTheme}>
 						{theme === "light" ? (
 							<MoonIcon className="h-5 w-5" />
