@@ -45,10 +45,10 @@ pnpm >= 8.0.0
 ### Quick Start
 ```bash
 # Create a new project
-pnpm create next-app -e https://github.com/yourusername/next-ts-template
+pnpm create next-app -e https://github.com/shabirkhan-dev/next-ts-template
 
 # Or clone directly
-git clone https://github.com/yourusername/next-ts-template.git my-project
+git clone https://github.com/shabirkhan-dev/next-ts-template.git my-project
 cd my-project
 pnpm install
 ```
@@ -218,4 +218,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/shabirkhan-dev)
+Made with ❤️ by [Shabir Khan](https://github.com/shabirkhan-dev)
