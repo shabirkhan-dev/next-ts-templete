@@ -1,41 +1,59 @@
-# Library Management System
+# 🚀 Next.js Enterprise Starter Template
 
-A modern, responsive library management system built with Next.js, React 19, and TailwindCSS. Features a beautiful dark mode implementation and comprehensive library management tools.
+A batteries-included Next.js template for building production-ready applications with TypeScript, TailwindCSS, and modern development tools.
 
-## 🌟 Features
+## ✨ Features
 
-- Modern React 19 with Server Components
-- Next.js 15 App Router
-- Dark/Light mode theming
-- Responsive design
-- Type-safe with TypeScript
-- Styled with TailwindCSS
-- Comprehensive commit workflow with Commitizen
-- Automated release management with semantic-release
-- Code quality tools (Biome, ESLint)
+### 🏗 Built with Modern Stack
+- [Next.js 15](https://nextjs.org/) with App Router
+- [React 19](https://react.dev/) with Server Components
+- [TypeScript](https://www.typescriptlang.org/) for type safety
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Biome](https://biomejs.dev/) for lightning-fast linting and formatting
 
-## 🚀 Getting Started
+### 🧰 Development Tools
+- [pnpm](https://pnpm.io/) for fast, disk space efficient package management
+- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
+- [Commitizen](https://commitizen-tools.github.io/commitizen/) for conventional commits
+- [Semantic Release](https://semantic-release.gitbook.io/) for automated versioning
+
+### 🧪 Testing Setup
+- [Vitest](https://vitest.dev/) for unit testing
+- [Playwright](https://playwright.dev/) for end-to-end testing
+- [Testing Library](https://testing-library.com/) for component testing
+
+### 🎨 UI Components
+- Customizable components using [shadcn/ui](https://ui.shadcn.com/)
+- Dark mode support out of the box
+- Responsive layout templates
+
+### 🔧 Developer Experience
+- Type checking in development
+- Fast refresh with Turbopack
+- Automated code formatting and linting
+- Git hooks for code quality
+- VSCode configurations and recommendations
+
+## 📦 Getting Started
 
 ### Prerequisites
-
-- Node.js 18+
-- pnpm 8+
-
-### Installation
-
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/library-management.git
+node >= 18.0.0
+pnpm >= 8.0.0
+```
 
-# Navigate to the project directory
-cd library-management
+### Quick Start
+```bash
+# Create a new project
+pnpm create next-app -e https://github.com/yourusername/next-ts-template
 
-# Install dependencies
+# Or clone directly
+git clone https://github.com/yourusername/next-ts-template.git my-project
+cd my-project
 pnpm install
 ```
 
 ### Development
-
 ```bash
 # Start development server with Turbopack
 pnpm dev
@@ -49,95 +67,144 @@ pnpm start
 
 ## 🧪 Testing
 
-To ensure code quality and prevent regressions, we use Playwright for E2E testing and Vitest for unit testing.
-
-First, install the additional testing dependencies:
-
 ```bash
-pnpm add -D @playwright/test vitest @testing-library/react @testing-library/jest-dom
-```
-
-### Running Tests
-
-```bash
-# Run Vitest unit tests
+# Run unit tests
 pnpm test
 
-# Run Playwright E2E tests
+# Run E2E tests
 pnpm test:e2e
-```
 
-Add the following scripts to your package.json:
+# Run tests with UI
+pnpm test:ui
 
-```json
-{
-  "scripts": {
-    // ... existing scripts
-    "test": "vitest",
-    "test:e2e": "playwright test",
-    "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage"
-  }
-}
+# Generate coverage report
+pnpm coverage
 ```
 
 ## 📝 Code Quality
 
 ```bash
-# Run type checking
+# Type checking
 pnpm typecheck
 
-# Run linting
-pnm lint
+# Lint files
+pnpm lint
 
-# Format code
+# Format files
 pnpm format
 
 # Fix linting issues
 pnpm lint:fix
 ```
 
-## 🔄 Commit Workflow
+## 📁 Project Structure
 
-This project uses Commitizen for standardized commit messages:
-
-```bash
-# Stage your changes
-git add .
-
-# Commit using Commitizen
-pnpm commit
+```
+├── src/
+│   ├── app/            # Next.js app router pages
+│   ├── components/     # React components
+│   │   ├── ui/        # shadcn/ui components
+│   │   └── ...        # Other components
+│   ├── lib/           # Utility functions
+│   ├── styles/        # Global styles
+│   └── types/         # TypeScript types
+├── public/            # Static files
+├── tests/             # Test files
+│   ├── e2e/          # Playwright tests
+│   └── unit/         # Vitest tests
+├── .github/          # GitHub workflows
+└── ... config files
 ```
 
 ## 🔧 Configuration Files
 
-The project includes several configuration files:
-
-- `tailwind.config.js` - TailwindCSS configuration
+- `next.config.js` - Next.js configuration
+- `tailwind.config.ts` - Tailwind CSS configuration
 - `biome.json` - Biome configuration
 - `lefthook.yml` - Git hooks configuration
+- `vitest.config.ts` - Vitest configuration
+- `playwright.config.ts` - Playwright configuration
 - `tsconfig.json` - TypeScript configuration
 
-## 📦 Release Process
+## 📚 Scripts
 
-Releases are automated using semantic-release. The configuration includes:
+| Script | Description |
+|--------|-------------|
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm start` | Start production server |
+| `pnpm test` | Run unit tests |
+| `pnpm test:e2e` | Run E2E tests |
+| `pnpm lint` | Lint code |
+| `pnpm format` | Format code |
+| `pnpm commit` | Create conventional commit |
+| `pnpm clean` | Clean build files |
 
-- Conventional commit message parsing
-- Automated changelog generation
-- GitHub release creation
-- Version bumping
+## 🚀 Deployment
 
-## 🛠️ Tech Stack
+This template is optimized for deployment on Vercel. Just push to your repository and connect it to Vercel for automatic deployments.
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Biome](https://biomejs.dev/)
-- [semantic-release](https://semantic-release.gitbook.io/)
-- [Commitizen](https://commitizen-tools.github.io/commitizen/)
-- [Playwright](https://playwright.dev/)
-- [Vitest](https://vitest.dev/)
+## 📖 Documentation
+
+- [Components](./docs/components.md)
+- [Testing](./docs/testing.md)
+- [Styling](./docs/styling.md)
+- [Development Guide](./docs/development.md)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes using Commitizen (`pnpm commit`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 💡 Included Examples
+
+- Authentication setup
+- API route examples
+- Protected routes
+- Form handling
+- Data fetching patterns
+- Error handling
+- Loading states
+- SEO optimization
+
+## ⚡️ Performance Features
+
+- Optimized images with next/image
+- Automatic font optimization
+- Route prefetching
+- Bundle analyzing
+- Code splitting
+- Tree shaking
+
+## 🔒 Security Features
+
+- Headers configuration
+- CSP setup
+- Environment variables handling
+- Rate limiting example
+- API route protection
+
+## 🎯 Why Use This Template?
+
+- Production-ready configuration
+- Modern development tools
+- Best practices implemented
+- Type safety out of the box
+- Comprehensive testing setup
+- Automated workflows
+- Consistent code style
+- Regular updates
+
+## 📫 Support
+
+For support, email your-email@example.com or open an issue in the repository.
 
 ## 👤 Author
 
@@ -148,3 +215,7 @@ Releases are automated using semantic-release. The configuration includes:
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Your Name](https://github.com/shabirkhan-dev)
