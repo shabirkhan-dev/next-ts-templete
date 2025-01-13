@@ -1,9 +1,24 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { Box, Button, Section } from "@radix-ui/themes";
+import { Button } from "@/components/ui/button";
+import { Box, MoonIcon, SunIcon } from "lucide-react";
 import * as React from "react";
 
+const DarkPattern = () => (
+	<div
+		className="absolute inset-0 w-full h-full -z-10"
+		style={{
+			background: `
+            radial-gradient(black 15%, transparent 16%) 0 0,
+            radial-gradient(black 15%, transparent 16%) 8px 8px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px
+            `,
+			backgroundColor: "#282828",
+			backgroundSize: "16px 16px",
+		}}
+	/>
+);
 export default function Page() {
 	const [theme, setTheme] = React.useState<"light" | "dark">("light");
 
@@ -18,9 +33,10 @@ export default function Page() {
 	};
 
 	return (
-		<div className="min-h-screen bg-[#f5f5f5] dark:bg-gray-900 bg-dot-pattern transition-colors duration-300">
+		<div className="min-h-screen  transition-colors duration-300">
+			<DarkPattern />
 			{/* Navigation */}
-			<nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 transition-colors duration-300">
+			<nav className="flex items-center justify-between px-6 py-4  transition-colors duration-300">
 				<div className="flex items-center gap-2">
 					<div className="flex gap-1">
 						<div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -31,29 +47,11 @@ export default function Page() {
 					</span>
 				</div>
 
-				<Box
-					py="8"
-					style={{
-						backgroundColor: "var(--gray-a2)",
-						borderRadius: "var(--radius-3)",
-					}}
-				>
-					<Section size="2" />
-				</Box>
+				<div>H</div>
 
 				<div className="flex items-center gap-4">
-					<Button
-						variant="ghost"
-						className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-					>
-						Sign in
-					</Button>
-					<Button
-						variant="outline"
-						className="text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-					>
-						Request demo
-					</Button>
+					<Button type="button">Sign in</Button>
+					<Button variant={"default"}>Request demo</Button>
 					<Button variant="ghost" onClick={toggleTheme}>
 						{theme === "light" ? (
 							<MoonIcon className="h-5 w-5" />
@@ -65,7 +63,7 @@ export default function Page() {
 			</nav>
 
 			{/* Hero Section */}
-			<main className="relative px-6 pt-20 pb-32 max-w-7xl mx-auto">
+			<main className="relative  px-6 pt-20 pb-32 max-w-7xl mx-auto">
 				{/* Book Note */}
 				<div className="absolute left-10 top-32 transform -rotate-6">
 					<div className="bg-yellow-100 dark:bg-yellow-900 p-4 shadow-lg w-48 transition-colors duration-300">
