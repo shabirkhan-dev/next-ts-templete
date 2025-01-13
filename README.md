@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Library Management System
 
-## Getting Started
+A modern, responsive library management system built with Next.js, React 19, and TailwindCSS. Features a beautiful dark mode implementation and comprehensive library management tools.
 
-First, run the development server:
+## 🌟 Features
+
+- Modern React 19 with Server Components
+- Next.js 15 App Router
+- Dark/Light mode theming
+- Responsive design
+- Type-safe with TypeScript
+- Styled with TailwindCSS
+- Comprehensive commit workflow with Commitizen
+- Automated release management with semantic-release
+- Code quality tools (Biome, ESLint)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm 8+
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/yourusername/library-management.git
+
+# Navigate to the project directory
+cd library-management
+
+# Install dependencies
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start development server with Turbopack
+pnpm dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build for production
+pnpm build
 
-## Learn More
+# Start production server
+pnpm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To ensure code quality and prevent regressions, we use Playwright for E2E testing and Vitest for unit testing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+First, install the additional testing dependencies:
 
-## Deploy on Vercel
+```bash
+pnpm add -D @playwright/test vitest @testing-library/react @testing-library/jest-dom
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Running Tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Run Vitest unit tests
+pnpm test
+
+# Run Playwright E2E tests
+pnpm test:e2e
+```
+
+Add the following scripts to your package.json:
+
+```json
+{
+  "scripts": {
+    // ... existing scripts
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
+  }
+}
+```
+
+## 📝 Code Quality
+
+```bash
+# Run type checking
+pnpm typecheck
+
+# Run linting
+pnm lint
+
+# Format code
+pnpm format
+
+# Fix linting issues
+pnpm lint:fix
+```
+
+## 🔄 Commit Workflow
+
+This project uses Commitizen for standardized commit messages:
+
+```bash
+# Stage your changes
+git add .
+
+# Commit using Commitizen
+pnpm commit
+```
+
+## 🔧 Configuration Files
+
+The project includes several configuration files:
+
+- `tailwind.config.js` - TailwindCSS configuration
+- `biome.json` - Biome configuration
+- `lefthook.yml` - Git hooks configuration
+- `tsconfig.json` - TypeScript configuration
+
+## 📦 Release Process
+
+Releases are automated using semantic-release. The configuration includes:
+
+- Conventional commit message parsing
+- Automated changelog generation
+- GitHub release creation
+- Version bumping
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Biome](https://biomejs.dev/)
+- [semantic-release](https://semantic-release.gitbook.io/)
+- [Commitizen](https://commitizen-tools.github.io/commitizen/)
+- [Playwright](https://playwright.dev/)
+- [Vitest](https://vitest.dev/)
+
+## 👤 Author
+
+**Shabir Khan**
+- Website: https://shabirkhan.dev
+- Email: shabirkhan.dev@gmail.com
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
