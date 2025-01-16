@@ -14,7 +14,9 @@
     "commit": "cz",
     "clean": "rimraf .next node_modules",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "deps:update": "pnpm update --latest",
+    "deps:check": "npx npm-check-updates"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
@@ -31,19 +33,26 @@
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/cz-commitlint": "^19.6.1",
+    "@playwright/test": "1.49.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@testing-library/dom": "10.4.0",
+    "@testing-library/react": "16.2.0",
     "@types/node": "^20.17.12",
     "@types/react": "^19.0.5",
     "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "4.3.4",
     "class-variance-authority": "^0.7.1",
     "commitizen": "^4.3.1",
+    "jsdom": "26.0.0",
     "lefthook": "^1.10.3",
     "postcss": "^8.4.49",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.1",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "2.1.8"
   },
   "config": {
     "commitizen": {
