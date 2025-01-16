@@ -12,7 +12,9 @@
     "typecheck": "tsc --noEmit --pretty",
     "prepare": "lefthook install",
     "commit": "cz",
-    "clean": "rimraf .next node_modules"
+    "clean": "rimraf .next node_modules",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
